@@ -84,7 +84,9 @@ if __name__ == '__main__':
             if state == 'found':
                 print("Game state detected: 'found'")
                 notify_game_found(client)
-                sleep(10)  # Avoid repeated notifications
+                while state == 'found':
+                    sleep(1)  # Avoid repeated notifications
+                    state = check_state()
             else:
                 print("No relevant game state detected.")
         except Exception as e:
