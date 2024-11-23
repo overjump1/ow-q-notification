@@ -89,5 +89,4 @@ if __name__ == '__main__':
                 print("No relevant game state detected.")
         except Exception as e:
             print("Error during state checking:", e)
-        
         sleep(1)
